@@ -5,9 +5,9 @@
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Summary: HA-Proxy is a TCP/HTTP reverse proxy for high availability environments
+Summary: TCP/HTTP reverse proxy for high availability environments
 License: GPL
-Group: System Environment/Daemons
+Group: System/Servers
 URL: http://haproxy.1wt.eu/
 Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
