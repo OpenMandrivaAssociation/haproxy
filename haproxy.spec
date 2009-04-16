@@ -1,6 +1,6 @@
 %define name    haproxy
 %define version 1.3.17
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name: %{name}
 Version: %{version}
@@ -41,12 +41,12 @@ risking the system's stability.
 rm -rf %{buildroot}
  
 mkdir -p %{buildroot}%{_sbindir}
-mkdir -p %{buildroot}%{_initddir}
+mkdir -p %{buildroot}%{_initrddir}
 mkdir -p %{buildroot}%{_sysconfdir}/%{name}
 
 cp %{name} %{buildroot}%{_sbindir}/
 cp examples/%{name}.cfg %{buildroot}%{_sysconfdir}/%{name}/
-cp examples/%{name}.init %{buildroot}%{_initddir}/%{name}
+cp examples/%{name}.init %{buildroot}%{_initrddir}/%{name}
  
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -63,5 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(0755,root,root) %{_sbindir}/%{name}
 %dir %{_sysconfdir}/%{name}
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/%{name}/%{name}.cfg
-%attr(0755,root,root) %config %{_initddir}/%{name}
+%attr(0755,root,root) %config %{_initrddir}/%{name}
 
