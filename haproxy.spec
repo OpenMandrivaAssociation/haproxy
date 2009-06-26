@@ -1,6 +1,6 @@
 %define name    haproxy
-%define version 1.3.17
-%define release %mkrel 2
+%define version 1.3.18
+%define release %mkrel 1
 
 Name: %{name}
 Version: %{version}
@@ -9,7 +9,7 @@ Summary: TCP/HTTP reverse proxy for high availability environments
 License: GPL
 Group: System/Servers
 URL: http://haproxy.1wt.eu/
-Source0: %{name}-%{version}.tar.gz
+Source0: http://haproxy.1wt.eu/download/1.3/src/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: libpcre-devel
 
@@ -34,8 +34,8 @@ risking the system's stability.
 
 %build
 #%{__make} USE_PCRE=1 "COPTS.pcre=-DUSE_PCRE $(pcre-config --cflags)" DEBUG="" TARGET=linux26
-%make TARGET=linux26
-
+%serverbuild
+%make TARGET=linux26 CFLAGS="%{optflags}"  
 
 %install
 rm -rf %{buildroot}
