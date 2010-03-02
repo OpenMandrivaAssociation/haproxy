@@ -1,17 +1,17 @@
 %define name    haproxy
-%define version 1.3.22
+%define version 1.4.0
 %define release %mkrel 1
 
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Summary: TCP/HTTP reverse proxy for high availability environments
-License: GPL
-Group: System/Servers
-URL: http://haproxy.1wt.eu/
-Source0: http://haproxy.1wt.eu/download/1.3/src/%{name}-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires: libpcre-devel
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Summary:	TCP/HTTP reverse proxy for high availability environments
+License:	GPLv2
+Group:		System/Servers
+URL:		http://haproxy.1wt.eu/
+Source0:	http://haproxy.1wt.eu/download/1.3/src/%{name}-%{version}.tar.gz
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRequires:	libpcre-devel
 
 %description
 HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited for high
@@ -51,12 +51,6 @@ cp examples/%{name}.init %{buildroot}%{_initrddir}/%{name}
 %clean
 rm -rf $RPM_BUILD_ROOT
  
-%post
-
-%preun
-
-%postun
-
 %files
 %defattr(-,root,root)
 %doc CHANGELOG TODO examples doc/haproxy-en.txt doc/haproxy-fr.txt doc/architecture.txt examples/url-switching.cfg
