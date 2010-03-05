@@ -1,5 +1,5 @@
 %define name    haproxy
-%define version 1.4.0
+%define version 1.4.1
 %define release %mkrel 1
 
 Name:		%{name}
@@ -9,7 +9,7 @@ Summary:	TCP/HTTP reverse proxy for high availability environments
 License:	GPLv2
 Group:		System/Servers
 URL:		http://haproxy.1wt.eu/
-Source0:	http://haproxy.1wt.eu/download/1.3/src/%{name}-%{version}.tar.gz
+Source0:	http://haproxy.1wt.eu/download/1.4/src/%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	libpcre-devel
 
