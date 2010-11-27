@@ -1,5 +1,5 @@
 %define name    haproxy
-%define version 1.4.8
+%define version 1.4.9
 %define release %mkrel 1
 
 Name:		%{name}
