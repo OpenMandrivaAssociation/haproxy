@@ -1,10 +1,6 @@
-%define name    haproxy
-%define version 1.4.9
-%define release %mkrel 1
-
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		haproxy
+Version:	1.4.10
+Release:	%mkrel 1
 Summary:	TCP/HTTP reverse proxy for high availability environments
 License:	GPLv2
 Group:		System/Servers
