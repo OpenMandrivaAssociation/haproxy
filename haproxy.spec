@@ -1,5 +1,5 @@
 Name:		haproxy
-Version:	1.4.13
+Version:	1.4.15
 Release:	%mkrel 1
 Summary:	TCP/HTTP reverse proxy for high availability environments
 License:	GPLv2
