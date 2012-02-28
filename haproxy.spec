@@ -1,12 +1,11 @@
 Name:		haproxy
-Version:	1.4.15
-Release:	%mkrel 1
+Version:	1.4.19
+Release:	1
 Summary:	TCP/HTTP reverse proxy for high availability environments
 License:	GPLv2
 Group:		System/Servers
 URL:		http://haproxy.1wt.eu/
 Source0:	http://haproxy.1wt.eu/download/1.4/src/%{name}-%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	libpcre-devel
 
 %description
@@ -34,7 +33,6 @@ risking the system's stability.
 %make TARGET=linux26 CFLAGS="%{optflags}"  
 
 %install
-rm -rf %{buildroot}
  
 mkdir -p %{buildroot}%{_sbindir}
 mkdir -p %{buildroot}%{_initrddir}
@@ -44,11 +42,7 @@ cp %{name} %{buildroot}%{_sbindir}/
 cp examples/%{name}.cfg %{buildroot}%{_sysconfdir}/%{name}/
 cp examples/%{name}.init %{buildroot}%{_initrddir}/%{name}
  
-%clean
-rm -rf $RPM_BUILD_ROOT
- 
 %files
-%defattr(-,root,root)
 %doc CHANGELOG TODO examples doc/haproxy-en.txt doc/haproxy-fr.txt doc/architecture.txt examples/url-switching.cfg
 %attr(0755,root,root) %{_sbindir}/%{name}
 %dir %{_sysconfdir}/%{name}
