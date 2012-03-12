@@ -1,5 +1,5 @@
 Name:		haproxy
-Version:	1.4.19
+Version:	1.4.20
 Release:	1
 Summary:	TCP/HTTP reverse proxy for high availability environments
 License:	GPLv2
@@ -20,9 +20,9 @@ availability environments. Indeed, it can:
 - add/modify/delete HTTP headers both ways
 - block requests matching a particular pattern
 
-It needs very little resource. Its event-driven architecture allows it to easily
-handle thousands of simultaneous connections on hundreds of instances without
-risking the system's stability.
+It needs very little resource. Its event-driven architecture allows it
+to easily handle thousands of simultaneous connections on hundreds of instances
+without risking the system's stability.
 
 %prep
 %setup -q
