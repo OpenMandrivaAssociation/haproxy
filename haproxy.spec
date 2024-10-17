@@ -4,7 +4,7 @@ Release:	2
 Summary:	TCP/HTTP reverse proxy for high availability environments
 License:	GPLv2+
 Group:		System/Servers
-URL:		http://haproxy.1wt.eu/
+URL:		https://haproxy.1wt.eu/
 Source0:	http://haproxy.1wt.eu/download/1.4/src/%{name}-%{version}.tar.gz
 BuildRequires:	libpcre-devel
 
